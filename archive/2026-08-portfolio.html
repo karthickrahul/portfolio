@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karthickk Srinivasan — Industrial Engineer</title>
+<meta name="description" content="Karthickk Srinivasan — Industrial engineer specializing in R&D design, manufacturing optimization, CAD and Lean process improvement. MSc candidate at VSB-TUO, Ostrava.">
+<meta property="og:title" content="Karthickk Srinivasan — Industrial Engineer">
+<meta property="og:description" content="Industrial engineer specializing in R&D design, manufacturing optimization, CAD and Lean process improvement.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#152535">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='16' fill='%23F6F3EA' stroke='%2325415C' stroke-width='2'/%3E%3Ctext x='20' y='26' font-family='Georgia,serif' font-size='16' font-weight='700' fill='%2325415C' text-anchor='middle'%3EKS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F3EA;
+    --paper-2:#FDFCF7;
+    --ink:#1E2731;
+    --ink-soft:#5B6672;
+    --ink-faint:#8A9199;
+    --navy:#25415C;
+    --navy-deep:#152535;
+    --brass:#A8752E;
+    --brass-deep:#7E5A22;
+    --teal:#2E6B5E;
+    --teal-deep:#1F4B41;
+    --rust:#AE4E28;
+    --rust-deep:#833A1C;
+    --line:#D9D2BE;
+    --border:#CFC6AE;
+    --card:#FDFCF7;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--brass);color:#fff;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3,.disp{font-family:'Space Grotesk', sans-serif;letter-spacing:-0.01em;}
+  .mono{font-family:'IBM Plex Mono', monospace;letter-spacing:0.02em;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 32px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    color:var(--brass-deep);
+    text-transform:uppercase;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--border);
+  }
+
+  /* ===== NAV ===== */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,243,234,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner{
+    max-width:1040px;margin:0 auto;padding:0 32px;
+    height:66px;display:flex;align-items:center;justify-content:space-between;
+  }
+  .brandmark{display:flex;align-items:center;gap:12px;}
+  .brandmark .ring{
+    width:34px;height:34px;border-radius:50%;
+    border:1px solid var(--navy);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+    flex-shrink:0;
+  }
+  .brandmark .ring::before,.brandmark .ring::after{
+    content:"";position:absolute;background:var(--brass);
+  }
+  .brandmark .ring::before{width:1px;height:6px;top:-3px;left:50%;transform:translateX(-50%);}
+  .brandmark .ring::after{width:6px;height:1px;left:-3px;top:50%;transform:translateY(-50%);}
+  .brandmark .ring span{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:600;color:var(--navy);}
+  .brandmark .name{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:500;color:var(--ink);}
+  .brandmark .name small{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--ink-faint);font-weight:400;text-transform:uppercase;}
+  nav.links{display:flex;align-items:center;gap:30px;}
+  nav.links a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--ink-soft);
+    position:relative;
+    padding:4px 0;
+  }
+  nav.links a::after{
+    content:"";position:absolute;left:0;bottom:0;width:0;height:1px;
+    background:var(--brass);transition:width .2s ease;
+  }
+  nav.links a:hover::after{width:100%;}
+  nav.links a:hover{color:var(--navy);}
+  .btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;letter-spacing:0.06em;text-transform:uppercase;
+    padding:10px 18px;
+    border:1px solid var(--navy);
+    color:var(--navy);
+    display:inline-flex;align-items:center;gap:8px;
+    transition:background .15s ease, color .15s ease;
+    cursor:pointer;
+    background:transparent;
+  }
+  .btn:hover{background:var(--navy);color:#fff;}
+  .btn.solid{background:var(--brass);border-color:var(--brass);color:#fff;}
+  .btn.solid:hover{background:var(--brass-deep);border-color:var(--brass-deep);}
+  .nav-cta{display:none;}
+  @media(min-width:760px){.nav-cta{display:inline-flex;}}
+  .menu-btn{
+    display:flex;flex-direction:column;justify-content:center;gap:5px;
+    width:34px;height:34px;background:none;border:none;cursor:pointer;padding:0;
+  }
+  .menu-btn span{display:block;width:20px;height:1px;background:var(--navy);}
+  @media(min-width:760px){.menu-btn{display:none;}}
+  .mobile-menu{
+    display:none;flex-direction:column;gap:2px;
+    max-height:0;overflow:hidden;
+    border-bottom:1px solid transparent;
+    transition:max-height .25s ease;
+  }
+  .mobile-menu.open{max-height:340px;border-bottom-color:var(--border);}
+  .mobile-menu a{
+    font-family:'IBM Plex Mono', monospace;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--ink-soft);padding:14px 32px;border-top:1px solid var(--border);
+  }
+  @media(max-width:759px){.mobile-menu{display:flex;}}
+
+  /* ===== HERO / TITLE BLOCK ===== */
+  section.hero{
+    position:relative;
+    padding:76px 0 60px;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:36px 36px;
+    background-position:center top;
+    -webkit-mask-image:linear-gradient(to bottom, black 55%, transparent 100%);
+            mask-image:linear-gradient(to bottom, black 55%, transparent 100%);
+  }
+  section.hero .wrap{
+    -webkit-mask-image:none; mask-image:none;
+  }
+  .titleblock{
+    background:var(--paper-2);
+    border:1px solid var(--navy);
+    position:relative;
+    padding:40px 40px 0;
+    overflow:hidden;
+  }
+  .hero-deco{
+    position:absolute;
+    right:-60px;top:-60px;
+    width:320px;height:320px;
+    opacity:0.55;
+    pointer-events:none;
+  }
+  @media(max-width:900px){.hero-deco{width:200px;height:200px;right:-50px;top:-50px;}}
+  @media(max-width:700px){.hero-deco{display:none;}}
+  .titleblock::before,.titleblock::after,
+  .titleblock .corner-tl, .titleblock .corner-br{
+    content:"";position:absolute;width:10px;height:10px;
+  }
+  .corner{position:absolute;width:9px;height:9px;border:1px solid var(--brass);}
+  .corner.tl{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+  .corner.tr{top:-1px;right:-1px;border-left:none;border-bottom:none;}
+  .corner.bl{bottom:-1px;left:-1px;border-right:none;border-top:none;}
+  .corner.br{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+  .hero-eyebrow{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.16em;
+    text-transform:uppercase;color:var(--brass-deep);margin-bottom:20px;
+  }
+  h1.hero-name{
+    font-size:clamp(34px,5.4vw,58px);
+    font-weight:600;
+    color:var(--navy-deep);
+    line-height:1.05;
+    margin-bottom:16px;
+    animation:heroIn .7s ease both;
+  }
+  p.hero-tagline{
+    font-family:'Source Serif 4', serif;
+    font-size:18px;
+    color:var(--ink-soft);
+    max-width:640px;
+    margin-bottom:32px;
+    animation:heroIn .7s ease .1s both;
+  }
+  @keyframes heroIn{
+    from{opacity:0;transform:translateY(10px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+  .titleblock-meta{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--border);
+  }
+  .tb-field{
+    padding:14px 18px;
+    border-right:1px solid var(--border);
+  }
+  .tb-field:last-child{border-right:none;}
+  .tb-field .k{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:4px;}
+  .tb-field .v{font-family:'Space Grotesk',sans-serif;font-size:13px;color:var(--ink);}
+  .hero-ctas{display:flex;gap:14px;margin:28px 0 0;flex-wrap:wrap;padding-bottom:0;}
+  .hero-actions-row{padding:28px 0 0;display:flex;gap:14px;flex-wrap:wrap;}
+
+  @media(max-width:700px){
+    .titleblock-meta{grid-template-columns:repeat(2,1fr);}
+    .tb-field:nth-child(2){border-right:none;}
+  }
+
+  /* ===== TICKER ===== */
+  .ticker{
+    background:var(--navy-deep);
+    overflow:hidden;
+    border-top:1px solid var(--brass);
+    border-bottom:1px solid var(--brass);
+  }
+  .ticker-track{
+    display:flex;width:max-content;
+    animation:ticker 32s linear infinite;
+  }
+  .ticker:hover .ticker-track{animation-play-state:paused;}
+  .ticker-track span{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+    color:#DCE3EA;
+    padding:16px 28px;
+    white-space:nowrap;
+  }
+  .ticker-track span::after{content:"◆";color:var(--brass);font-size:8px;margin-left:28px;}
+  @keyframes ticker{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  @media(prefers-reduced-motion:reduce){.ticker-track{animation:none;}}
+
+  /* dimension divider */
+  .dim-divider{
+    display:flex;align-items:center;gap:0;
+    max-width:1040px;margin:0 auto;padding:0 32px;
+    color:var(--ink-faint);
+  }
+  .dim-divider .tick{width:1px;height:10px;background:var(--border);}
+  .dim-divider .line{flex:1;height:1px;background:var(--border);}
+  .dim-divider .label{
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;
+    padding:0 12px;white-space:nowrap;
+  }
+
+  section{padding:88px 0;}
+  h2.section-title{
+    font-size:clamp(24px,3vw,32px);
+    font-weight:600;
+    color:var(--navy-deep);
+    margin-bottom:28px;
+  }
+
+  /* ===== ABOUT ===== */
+  .about-grid{display:grid;grid-template-columns:1fr;gap:28px;}
+  @media(min-width:760px){.about-grid{grid-template-columns:0.9fr 1.6fr;gap:56px;}}
+  .about-portrait{
+    border:1px solid var(--border);
+    background:var(--paper-2);
+    padding:24px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  .about-portrait .row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--border);}
+  .about-portrait .row:last-child{border-bottom:none;}
+  .about-portrait .row span:first-child{color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.08em;font-size:10px;}
+  .about-body p{font-size:17px;color:var(--ink);margin-bottom:16px;}
+  .about-body p:last-child{margin-bottom:0;}
+
+  /* ===== HIGHLIGHTS STRIP ===== */
+  .highlights{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    border:1px solid var(--border);
+  }
+  @media(min-width:760px){.highlights{grid-template-columns:repeat(4,1fr);}}
+  .hl{
+    padding:24px 22px;
+    border-right:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    transition:background .18s ease, transform .18s ease;
+  }
+  .hl:hover{background:var(--paper-2);transform:translateY(-3px);}
+  @media(min-width:760px){.hl{border-bottom:none;}}
+  .hl:nth-child(2n){border-right:1px solid var(--border);}
+  @media(min-width:760px){.hl:last-child{border-right:none;}}
+  .hl .num{font-family:'Space Grotesk',sans-serif;font-size:30px;font-weight:600;color:var(--brass-deep);line-height:1;margin-bottom:8px;}
+  .hl .lbl{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-soft);line-height:1.5;}
+
+  /* ===== EXPERIENCE ===== */
+  .timeline{position:relative;padding-left:28px;}
+  .timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--border);}
+  .tl-item{position:relative;padding-bottom:48px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{
+    content:"";position:absolute;left:-28px;top:4px;
+    width:9px;height:9px;border:1px solid var(--navy);background:var(--paper-2);
+    transition:background .2s ease, transform .2s ease;
+  }
+  .tl-item:hover::before{background:var(--brass);border-color:var(--brass);transform:scale(1.3);}
+  .tl-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:6px;}
+  .tl-role{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18px;color:var(--navy-deep);}
+  .tl-org{font-family:'Space Grotesk',sans-serif;font-weight:400;font-size:15px;color:var(--brass-deep);}
+  .tl-dates{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--ink-faint);text-transform:uppercase;}
+  .tl-item ul{margin-top:10px;padding-left:18px;}
+  .tl-item li{font-size:16px;color:var(--ink-soft);margin-bottom:6px;}
+
+  /* ===== PROJECTS ===== */
+  .proj-grid{display:grid;grid-template-columns:1fr;gap:22px;}
+  @media(min-width:700px){.proj-grid{grid-template-columns:1fr 1fr;}}
+  .proj-card{
+    border:1px solid var(--border);
+    background:var(--paper-2);
+    position:relative;
+    padding:26px 26px 24px;
+    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+  .proj-card:hover{
+    transform:translateY(-4px);
+    border-color:var(--brass);
+    box-shadow:0 10px 24px rgba(21,37,53,0.08);
+  }
+  .proj-card .sheet-no{
+    position:absolute;top:14px;right:16px;
+    font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--ink-faint);
+  }
+  .proj-card h3{font-size:19px;font-weight:600;color:var(--navy-deep);margin-bottom:6px;padding-right:50px;}
+  .proj-meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--brass-deep);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:14px;}
+  .proj-card p{font-size:15px;color:var(--ink-soft);}
+
+  /* ===== SKILLS (BOM) ===== */
+  .bom{width:100%;border-collapse:collapse;font-size:14.5px;}
+  .bom thead th{
+    text-align:left;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--ink-faint);
+    border-bottom:1px solid var(--navy);
+    padding:0 12px 10px;
+  }
+  .bom tbody td{
+    padding:13px 12px;
+    border-bottom:1px solid var(--border);
+    vertical-align:top;
+    transition:background .15s ease;
+  }
+  .bom tbody tr:hover td{background:var(--paper-2);}
+  .bom tbody tr:last-child td{border-bottom:1px solid var(--navy);}
+  .bom td.item-no{font-family:'IBM Plex Mono',monospace;color:var(--ink-faint);width:44px;}
+  .bom td.cat{font-family:'Space Grotesk',sans-serif;font-weight:500;color:var(--navy-deep);width:220px;}
+  .bom td.cat .dot{
+    display:inline-block;width:7px;height:7px;border-radius:50%;
+    margin-right:9px;
+  }
+  .bom td.items{color:var(--ink-soft);}
+  .bom-wrap{overflow-x:auto;}
+  @media(max-width:600px){.bom{min-width:520px;}}
+
+  /* ===== EDUCATION ===== */
+  .edu-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);}
+  .edu-item{
+    display:grid;grid-template-columns:1fr;gap:6px;
+    padding:22px 0;border-bottom:1px solid var(--border);
+  }
+  @media(min-width:700px){.edu-item{grid-template-columns:1fr auto;align-items:baseline;}}
+  .edu-item h3{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:600;color:var(--navy-deep);}
+  .edu-item .deg{font-size:15px;color:var(--ink-soft);margin-top:3px;}
+  .edu-item .dates{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.05em;}
+
+  /* ===== CONTACT / FOOTER ===== */
+  footer{
+    background:var(--navy-deep);
+    color:#EDE9DD;
+    padding:70px 0 0;
+  }
+  footer .wrap{padding-bottom:0;}
+  footer h2{font-size:clamp(26px,3.4vw,36px);font-weight:600;color:#fff;margin-bottom:14px;}
+  footer p.lead{font-family:'Source Serif 4',serif;font-size:17px;color:#C7CDD6;max-width:520px;margin-bottom:36px;}
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:44px;}
+  @media(min-width:700px){.contact-grid{grid-template-columns:repeat(2,1fr);}}
+  .contact-item{
+    display:flex;align-items:center;gap:14px;
+    border:1px solid rgba(255,255,255,0.18);
+    padding:16px 18px;
+    transition:border-color .18s ease, background .18s ease;
+  }
+  a.contact-item:hover{border-color:var(--brass-light,#C79A55);background:rgba(255,255,255,0.03);}
+  .contact-item .k{
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#8FA0B3;
+    display:block;margin-bottom:3px;
+  }
+  .contact-item .v{font-family:'Space Grotesk',sans-serif;font-size:14.5px;color:#fff;}
+  .contact-item a.v:hover{color:var(--brass-light,#C79A55);}
+  footer .btn.on-dark{border-color:#EDE9DD;color:#EDE9DD;}
+  footer .btn.on-dark:hover{background:#EDE9DD;color:var(--navy-deep);}
+  .titlestrip{
+    margin-top:50px;
+    border-top:1px solid rgba(255,255,255,0.18);
+    padding:18px 0;
+  }
+  .titlestrip .wrap{
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;
+    color:#8FA0B3;text-transform:uppercase;
+  }
+
+  .fade-up{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
+  .fade-up.in{opacity:1;transform:translateY(0);}
+
+  @media(max-width:759px){
+    nav.links{display:none;}
+    .wrap{padding:0 20px;}
+    .titleblock{padding:28px 22px 0;}
+    section{padding:60px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brandmark">
+      <div class="ring"><span>KS</span></div>
+      <div class="name">Karthickk Srinivasan<small>Industrial Engineer</small></div>
+    </div>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn nav-cta">Get in touch</a>
+    <button id="menu-btn" class="menu-btn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="resume.pdf" download="Karthickk_Srinivasan_Resume.pdf" class="btn solid" style="justify-content:center;margin-top:6px;">Download résumé</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="titleblock">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+      <svg class="hero-deco" viewBox="0 0 320 320" aria-hidden="true">
+        <circle cx="200" cy="120" r="110" fill="none" stroke="#25415C" stroke-width="1"/>
+        <circle cx="200" cy="120" r="80" fill="none" stroke="#A8752E" stroke-width="1"/>
+        <circle cx="200" cy="120" r="3" fill="#A8752E"/>
+        <line x1="200" y1="10" x2="200" y2="30" stroke="#25415C" stroke-width="1"/>
+        <line x1="200" y1="210" x2="200" y2="230" stroke="#25415C" stroke-width="1"/>
+        <line x1="90" y1="120" x2="110" y2="120" stroke="#25415C" stroke-width="1"/>
+        <line x1="290" y1="120" x2="310" y2="120" stroke="#25415C" stroke-width="1"/>
+        <line x1="123" y1="43" x2="135" y2="53" stroke="#25415C" stroke-width="0.75"/>
+        <line x1="265" y1="187" x2="277" y2="197" stroke="#25415C" stroke-width="0.75"/>
+        <line x1="277" y1="43" x2="265" y2="53" stroke="#25415C" stroke-width="0.75"/>
+        <line x1="135" y1="187" x2="123" y2="197" stroke="#25415C" stroke-width="0.75"/>
+        <circle cx="200" cy="120" r="45" fill="none" stroke="#25415C" stroke-width="0.75" stroke-dasharray="2 4"/>
+      </svg>
+      <div class="hero-eyebrow">Industrial Engineering — Design &amp; Manufacturing</div>
+      <h1 class="hero-name">Karthickk<br>Srinivasan</h1>
+      <p class="hero-tagline">Industrial engineer with hands-on experience across R&amp;D design and manufacturing optimization — redesigning components for reliability and applying Lean principles to lift production performance.</p>
+      <div class="hero-actions-row">
+        <a href="#projects" class="btn">View projects</a>
+        <a href="resume.pdf" download="Karthickk_Srinivasan_Resume.pdf" class="btn solid">Download résumé</a>
+      </div>
+      <div class="titleblock-meta">
+        <div class="tb-field"><div class="k">Location</div><div class="v">Ostrava, Czechia</div></div>
+        <div class="tb-field"><div class="k">Status</div><div class="v">MSc Candidate, VSB&#8209;TUO</div></div>
+        <div class="tb-field"><div class="k">Focus</div><div class="v">Process &amp; CAD Design</div></div>
+        <div class="tb-field"><div class="k">Rev</div><div class="v">2026</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Fusion 360</span><span>Creo</span><span>AutoCAD</span><span>CNC / VMC</span><span>Lean · Kaizen · 5S</span><span>Six Sigma</span><span>Root-cause analysis</span><span>Process optimization</span>
+    <span>Fusion 360</span><span>Creo</span><span>AutoCAD</span><span>CNC / VMC</span><span>Lean · Kaizen · 5S</span><span>Six Sigma</span><span>Root-cause analysis</span><span>Process optimization</span>
+  </div>
+</div>
+
+<div class="dim-divider" aria-hidden="true">
+  <div class="tick"></div><div class="line"></div>
+  <div class="label">01 — Profile</div>
+  <div class="line"></div><div class="tick"></div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">01 / About</div>
+    <div class="about-grid fade-up">
+      <div class="about-portrait">
+        <div class="row"><span>Discipline</span><span>Industrial Engineering</span></div>
+        <div class="row"><span>Tools</span><span>Fusion 360 · Creo · AutoCAD</span></div>
+        <div class="row"><span>Methods</span><span>Lean · Kaizen · 5S · Six Sigma</span></div>
+        <div class="row"><span>Machining</span><span>CNC / VMC Operation</span></div>
+        <div class="row"><span>Languages</span><span>English</span></div>
+      </div>
+      <div class="about-body">
+        <p>I'm an industrial engineer who likes taking a part that fails too often, or a process that runs slower than it should, and finding the specific reason why — then redesigning it. That approach led to a pump-shaft geometry redesign that improved hydraulic efficiency by 20% and cut mechanical failures, and an elevator shaft safety-door system built to meet global safety standards.</p>
+        <p>My background spans prototype testing, root-cause analysis and process improvement using Lean tools, alongside CAD work in Fusion 360, Creo and AutoCAD. I'm currently completing a Master's in Industrial Engineering at VSB&nbsp;–&nbsp;Technical University of Ostrava, and looking for opportunities to apply engineering design and continuous-improvement thinking to reliability and production performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="highlights-wrap" style="padding-top:0;">
+  <div class="wrap fade-up">
+    <div class="highlights">
+      <div class="hl"><div class="num" style="color:var(--brass-deep);">20%</div><div class="lbl">Efficiency gain from a redesigned pump-shaft geometry</div></div>
+      <div class="hl"><div class="num" style="color:var(--navy);">2</div><div class="lbl">Industry roles across R&amp;D and production quality</div></div>
+      <div class="hl"><div class="num" style="color:var(--teal-deep);">3</div><div class="lbl">CAD/CAM platforms — Fusion 360, Creo, AutoCAD</div></div>
+      <div class="hl"><div class="num" style="color:var(--rust-deep);">1</div><div class="lbl">Safety-door system engineered to global standards</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="eyebrow">02 / Experience</div>
+    <h2 class="section-title">Where I've built things</h2>
+    <div class="timeline fade-up">
+      <div class="tl-item">
+        <div class="tl-head">
+          <div><span class="tl-role">R&amp;D Intern</span> — <span class="tl-org">Kone Elevators, Chennai</span></div>
+          <div class="tl-dates">Jul 2022 – Jun 2023</div>
+        </div>
+        <ul>
+          <li>Designed an improved elevator shaft safety-door system, reducing safety risks and aligning with global safety standards.</li>
+          <li>Took part in prototype development and testing to improve reliability and maintainability.</li>
+          <li>Contributed to engineering documentation and design evaluations that improved system performance.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-head">
+          <div><span class="tl-role">Quality &amp; Production Assistant</span> — <span class="tl-org">Sri Vigneshwaraa Pumps, Coimbatore</span></div>
+          <div class="tl-dates">Aug 2023 – Jun 2025</div>
+        </div>
+        <ul>
+          <li>Operated CNC/VMC machinery, ensuring high-precision manufacturing of pump components.</li>
+          <li>Redesigned pump shaft geometry, improving hydraulic efficiency by 20% and reducing mechanical failures.</li>
+          <li>Supported quality inspections and implemented minor process improvements to cut rework and improve output consistency.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="eyebrow">03 / Projects</div>
+    <h2 class="section-title">Selected work</h2>
+    <div class="proj-grid fade-up">
+      <div class="proj-card">
+        <span class="sheet-no">SHT 01</span>
+        <h3>Biodegradable PLA replacement for automotive plastic parts</h3>
+        <div class="proj-meta">Coimbatore · Jan 2024</div>
+        <p>Replaced conventional plastic components with PLA using additive manufacturing — improving sustainability while evaluating structural performance and feasibility for automotive applications.</p>
+      </div>
+      <div class="proj-card">
+        <span class="sheet-no">SHT 02</span>
+        <h3>SAE India — Electric Four Wheeler Design Competition</h3>
+        <div class="proj-meta">Chennai</div>
+        <p>Designed detailed 3D CAD models and CAM setups for vehicle subsystems, producing manufacturing drawings and assembly documentation. Collaborated with a cross-functional team to prototype components and validate designs through testing and simulation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow">04 / Skills</div>
+    <h2 class="section-title">Bill of materials</h2>
+    <div class="bom-wrap fade-up">
+      <table class="bom">
+        <thead>
+          <tr><th>No.</th><th>Category</th><th>Skill / component</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="item-no">01</td><td class="cat"><span class="dot" style="background:#25415C;"></span>Industrial engineering</td><td class="items">Lean principles, Kaizen, 5S, Six Sigma concepts, Fishbone diagram root-cause analysis</td></tr>
+          <tr><td class="item-no">02</td><td class="cat"><span class="dot" style="background:#A8752E;"></span>CAD software</td><td class="items">Fusion 360, Creo, AutoCAD</td></tr>
+          <tr><td class="item-no">03</td><td class="cat"><span class="dot" style="background:#2E6B5E;"></span>Manufacturing</td><td class="items">CNC / VMC operation, prototype testing, process improvement</td></tr>
+          <tr><td class="item-no">04</td><td class="cat"><span class="dot" style="background:#AE4E28;"></span>Tools &amp; software</td><td class="items">MS Office Suite, Excel (intermediate, formulas)</td></tr>
+          <tr><td class="item-no">05</td><td class="cat"><span class="dot" style="background:#5B6672;"></span>Professional</td><td class="items">Problem-solving, communication</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="eyebrow">05 / Education</div>
+    <h2 class="section-title">Education &amp; courses</h2>
+    <div class="edu-list fade-up">
+      <div class="edu-item">
+        <div>
+          <h3>VSB – Technical University of Ostrava</h3>
+          <div class="deg">Master's, Industrial Engineering · Ostrava, Czech Republic</div>
+        </div>
+        <div class="dates">Sep 2025 – Jun 2027 · Expected 2027</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <h3>KPR College of Engineering &amp; Technology</h3>
+          <div class="deg">Bachelor's · Anna University, Coimbatore, India</div>
+        </div>
+        <div class="dates">Jun 2020 – Apr 2024</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <h3>Fusion 360: CAD/CAM</h3>
+          <div class="deg">Parametric 3D modeling, CAM toolpath generation, post-processing for CNC, design-for-manufacture · Coimbatore</div>
+        </div>
+        <div class="dates">Course</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#8FA0B3;">06 / Contact</div>
+    <h2>Let's talk about a role</h2>
+    <p class="lead">Open to opportunities in engineering design, manufacturing and continuous improvement. The easiest ways to reach me are below.</p>
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:karthickrahul8@gmail.com">
+        <div><span class="k">Email</span><span class="v">karthickrahul8@gmail.com</span></div>
+      </a>
+      <a class="contact-item" href="tel:776869402">
+        <div><span class="k">Phone</span><span class="v">776 869 402</span></div>
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/in/karthickkrahul" target="_blank" rel="noopener">
+        <div><span class="k">LinkedIn</span><span class="v">linkedin.com/in/karthickkrahul</span></div>
+      </a>
+      <div class="contact-item" style="cursor:default;">
+        <div><span class="k">Location</span><span class="v">Ostrava, Czech Republic</span></div>
+      </div>
+    </div>
+    <a href="resume.pdf" download="Karthickk_Srinivasan_Resume.pdf" class="btn on-dark">Download résumé (PDF)</a>
+    <div class="titlestrip">
+      <div class="wrap">
+        <span>Karthickk Srinivasan</span>
+        <span>Industrial Engineer</span>
+        <span>Sheet 1/1</span>
+        <span>Rev 2026</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, {threshold:0.12});
+  document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if(menuBtn && mobileMenu){
+    menuBtn.addEventListener('click', ()=>{
+      const open = mobileMenu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click', ()=> mobileMenu.classList.remove('open'));
+    });
+  }
+</script>
+
+</body>
+</html>
