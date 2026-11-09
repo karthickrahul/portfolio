@@ -13,14 +13,14 @@ window.SITE = {
   // ---------------- FONT SIZES ----------------
   // 1 = normal size.  0.8 = 20% smaller.  1.2 = 20% bigger.
   fontSizes: {
-    "headline":       1,   // "INDUSTRIAL ENGINEER FOR mechanical design" at the top
-    "bigword":        1,   // giant grey "ENGINEER" behind the animation
-    "section-titles": 1,   // "ABOUT ME", "CAREER ROUTE", "FEATURED PROJECTS"...
-    "card-titles":    1,   // titles inside cards (projects, jobs, skills, contact box)
-    "numbers":        1,   // "2yrs  20%  1live" under the hero
-    "marquee":        1,   // scrolling strip of tools
-    "giant-words":    1,   // huge "CONTACT" and your name at the bottom
-    "text":           1    // all normal paragraph text
+    "headline":       0.8,   // "INDUSTRIAL ENGINEER FOR mechanical design" at the top
+    "bigword":        0.8,   // giant grey "ENGINEER" behind the animation
+    "section-titles": 0.8,   // "ABOUT ME", "CAREER ROUTE", "FEATURED PROJECTS"...
+    "card-titles":    0.8,   // titles inside cards (projects, jobs, skills, contact box)
+    "numbers":        0.8,   // "2yrs  20%  1live" under the hero
+    "marquee":        0.8,   // scrolling strip of tools
+    "giant-words":    0.8,   // huge "CONTACT" and your name at the bottom
+    "text":           0.8    // all normal paragraph text
   },
 
   name: "Karthickk Rahul Srinivasan",
