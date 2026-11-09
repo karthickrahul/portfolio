@@ -201,8 +201,8 @@ section.sheet{padding-block:96px;border-bottom:1px solid var(--line)}
 
 /* CONTACT */
 .contact{position:relative;overflow:hidden;padding-block:110px 90px;border-bottom:1px solid var(--line)}
-.contact .giant{font-family:var(--f-display);font-weight:900;font-size:calc(clamp(120px,26vw,400px) * var(--size-giant-words,1));line-height:.78;text-transform:uppercase;margin:0;color:var(--paper);letter-spacing:-.01em;white-space:nowrap;will-change:transform}
-.contact .panel{position:relative;z-index:2;margin-top:-9vw;margin-left:auto;width:min(620px,100%);background:var(--signal);color:#fff;padding:32px;display:flex;flex-direction:column;gap:22px;box-shadow:0 30px 80px -20px color-mix(in srgb,var(--signal) 50%,transparent);will-change:transform}
+.contact .giant{font-family:var(--f-display);font-weight:900;font-size:calc(clamp(120px,26vw,400px) * var(--size-contact-word,1));line-height:.78;text-transform:uppercase;margin:16px 0 0;color:var(--paper);letter-spacing:-.01em;white-space:nowrap;will-change:transform}
+.contact .panel{position:relative;z-index:2;margin-top:calc(-9vw * var(--size-contact-word,1));margin-left:auto;width:min(620px,100%);background:var(--signal);color:#fff;padding:32px;display:flex;flex-direction:column;gap:22px;box-shadow:0 30px 80px -20px color-mix(in srgb,var(--signal) 50%,transparent);will-change:transform}
 .panel .mono{color:#ffd9d6}
 .panel h3{font-family:var(--f-display);font-weight:700;font-size:calc(38px * var(--size-card-titles,1));line-height:1;text-transform:uppercase}
 .panel p{margin:0;color:#ffe9e7;max-width:48ch}
