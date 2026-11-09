@@ -207,6 +207,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 footer a{text-decoration:none}
 footer .mono{color:#9aa4b1}
 
+.roles{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.roles span{font-size:13.5px;font-weight:500;padding:6px 12px;border:1px solid #4a5666;border-radius:999px;color:#e6eaef}
 /* LAYERED CONTACT: page slides up to uncover it */
 body{background:var(--ink)}
 .page{position:relative;z-index:2;background:var(--paper);border-radius:0 0 28px 28px;overflow:hidden;box-shadow:0 34px 60px -24px rgba(0,0,0,.55)}
@@ -304,6 +306,7 @@ body{background:var(--ink)}
       <span class="mono">05 · Contact</span>
       <h2 data-contact-heading></h2>
       <p data-contact-text></p>
+      <div class="roles" id="roles"></div>
     </div>
     <div class="clines" id="clines"></div>
   </div>
@@ -347,6 +350,7 @@ body{background:var(--ink)}
   set('[data-intro]', rich(D.hero.intro));
   set('[data-contact-heading]', esc(D.contact.heading));
   set('[data-contact-text]', esc(D.contact.text));
+  $('#roles').innerHTML = (D.contact.roles || []).map(r => `<span>${esc(r)}</span>`).join('');
   $('#swap').textContent = (D.hero.rotatingWords || [])[0] || '';
 
   const ctas = [`<a class="btn primary" href="#projects">View projects</a>`];
@@ -504,14 +508,14 @@ body{background:var(--ink)}
   resize(); addEventListener('resize',resize);
 
   const P = Array.from({length:N},()=>({x:Math.random()*W,y:Math.random()*H,vx:0,vy:0,s:Math.random()<.1?2.4:1.5,red:Math.random()<.09}));
-  let cur=0, angle=0; const mouse={x:-9999,y:-9999};
+  let cur=0, angle=0, wordIdx=0; const mouse={x:-9999,y:-9999};
   canvas.addEventListener('pointermove',e=>{const r=canvas.getBoundingClientRect(); mouse.x=e.clientX-r.left; mouse.y=e.clientY-r.top;});
   canvas.addEventListener('pointerleave',()=>{mouse.x=mouse.y=-9999;});
 
   function setShape(i){
     cur=i; angle=0;
     swapEl.classList.add('out');
-    setTimeout(()=>{ swapEl.textContent = RW.length ? RW[i % RW.length] : '';
+    setTimeout(()=>{ wordIdx=(wordIdx+1)%Math.max(RW.length,1); swapEl.textContent = RW.length ? RW[wordIdx] : '';
       document.getElementById('fig-title').textContent = shapes[i].title;
       document.getElementById('fig-no').textContent = shapes[i].no;
       document.getElementById('fig-sheet').textContent = (i+1)+' of '+shapes.length;

@@ -21,11 +21,11 @@ window.SITE = {
   },
 
   name: "Karthickk Rahul Srinivasan",
-  title: "Industrial Engineer · Quality & Process",   // line under your name
+  title: "Industrial Engineer · Process · Quality · Supply Chain · CAD",   // line under your name
   firstName: "Karthick",
   initials: "KS",
   location: "Ostrava, Czech Republic",
-  status: "Open to internships",        // small green badge top-right
+  status: "Open to internships & graduate roles",        // small green badge top-right
   email: "karthickrahul8@gmail.com",
   linkedin: "https://www.linkedin.com/in/karthickk-srinivasan",
   github: "https://github.com/karthickrahul",
@@ -42,7 +42,7 @@ window.SITE = {
   hero: {
     headline: "Focused on",              // text before the rotating red words
     // These rotate in red, in sync with the drawing (impeller, control chart, gear).
-    rotatingWords: ["mechanical design", "quality & SPC", "lean production"],
+    rotatingWords: ["process engineering", "quality & SPC", "supply chain planning", "CAD & mechanical design"],
     intro: "M.Sc. Industrial Engineering student at **VŠB – Technical University of Ostrava**. Mechanical engineer with two years in **quality and production** on a pump manufacturing floor, now building data tools for manufacturing.",
     stats: [
       { value: "2",  unit: "yrs",  text: "Quality & production at Sri Vigneshwaraa Pumps, Coimbatore" },
@@ -59,7 +59,7 @@ window.SITE = {
     facts: [
       { label: "Study",       value: "M.Sc. Industrial Engineering, VŠB – TU Ostrava (exp. Jun 2027)" },
       { label: "Degree",      value: "B.E. Mechanical Engineering, Anna University (2024)" },
-      { label: "Looking for", value: "Internships in quality, process & industrial engineering" },
+      { label: "Looking for", value: "Internships & graduate roles: process, quality, supply chain, CAD design" },
       { label: "Based in",    value: "Ostrava, Czech Republic" }
     ]
   },
@@ -74,7 +74,7 @@ window.SITE = {
     { when: "Jul 2022 – Jun 2023", title: "R&D Intern",            org: "Kone Elevators, Chennai",                 text: "Safety door prototype development." },
     { when: "Aug 2023 – Jun 2025", title: "Quality & Production",  org: "Sri Vigneshwaraa Pumps, Coimbatore",      text: "20% pump shaft efficiency gain via CAD redesign. DMAIC project on final-inspection rejection rate." },
     { when: "Sep 2025 →",          title: "M.Sc. Industrial Eng.", org: "VŠB – TU Ostrava",                        text: "Thesis: selecting an industrial CT system and planning its procurement and rollout." },
-    { when: "Now",                 title: "Next step",             org: "Czech Republic / EMEA",                   text: "Looking for an internship in quality, process or industrial engineering." }
+    { when: "Now",                 title: "Next step",             org: "Czech Republic / EMEA",                   text: "Looking for a role in process, quality, supply chain or CAD design engineering." }
   ],
 
   // status: "live" (green), "progress" (amber), or any other short word (grey)
@@ -139,7 +139,7 @@ window.SITE = {
     { title: "Quality",    items: ["SPC, Cp / Cpk", "FMEA, 8D", "DMAIC, Gage R&R", "Pareto, fishbone", "Control plans, SOPs"] },
     { title: "Design",     items: ["Fusion 360", "CATIA V5", "Creo, AutoCAD", "GD&T", "Fixture & tooling design"] },
     { title: "Data",       items: ["Python, Pandas, Matplotlib", "Streamlit, FastAPI", "Power BI (DAX)", "Excel, basic VBA", "Git & GitHub"] },
-    { title: "Production", items: ["CNC / VMC machining", "Line balancing", "Production forecasting", "Engineering drawings", "Additive manufacturing"] }
+    { title: "Production & supply chain", items: ["Demand & production forecasting", "Sales tracking & KPI reporting", "Line balancing", "CNC / VMC machining", "Additive manufacturing"] }
   ],
 
   credentials: [
@@ -150,7 +150,9 @@ window.SITE = {
   ],
 
   contact: {
-    heading: "Hiring an intern for quality or process work?",
-    text: "I'm based in Ostrava and can start on-site or hybrid. I reply to every message."
+    heading: "Open to process, quality, supply chain and CAD design roles",
+    text: "Internships and graduate positions where I can apply SPC and capability studies, root-cause analysis (8D, DMAIC), line balancing, demand and production planning, and 3D CAD with GD&T. Based in Ostrava, available on-site or hybrid.",
+    // the role chips shown in the contact panel
+    roles: ["Process Engineering", "Quality Engineering", "Supply Chain & Production Planning", "CAD / Mechanical Design"]
   }
 };
