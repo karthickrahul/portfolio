@@ -207,6 +207,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 footer a{text-decoration:none}
 footer .mono{color:#9aa4b1}
 
+/* LAYERED CONTACT: page slides up to uncover it */
+body{background:var(--ink)}
+.page{position:relative;z-index:2;background:var(--paper);border-radius:0 0 28px 28px;overflow:hidden;box-shadow:0 34px 60px -24px rgba(0,0,0,.55)}
+.page > section:last-child{border-bottom:0}
+.reveal{position:relative;z-index:1}
+.reveal.fixed{position:fixed;left:0;right:0;bottom:0}
+.reveal .contact{padding-top:110px}
+@media (max-width:860px){.reveal .contact{padding-block:48px 28px}.reveal .contact h2{margin-top:6px}.reveal .contact p{margin-top:10px}.cline{padding:12px 0}.page{border-radius:0 0 20px 20px}}
+.reveal .contact .grid{transition:transform .2s linear,opacity .2s linear}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -225,6 +234,7 @@ footer .mono{color:#9aa4b1}
   </div>
 </nav>
 
+<main class="page" id="page">
 <header class="hero" id="top">
   <div class="wrap">
     <div class="hero-copy">
@@ -284,6 +294,10 @@ footer .mono{color:#9aa4b1}
   </div>
 </section>
 
+</main>
+
+<!-- contact layer: sits behind the page and is uncovered as you scroll to the end -->
+<div class="reveal" id="reveal">
 <section class="contact" id="contact">
   <div class="wrap grid">
     <div>
@@ -301,6 +315,7 @@ footer .mono{color:#9aa4b1}
     <a class="mono" href="#top">Back to top ↑</a>
   </div>
 </footer>
+</div>
 
 <script>
 /* ---------- builds the page from content.js (no need to edit this) ---------- */
@@ -393,6 +408,36 @@ footer .mono{color:#9aa4b1}
     const done = t => { btn.textContent = t; setTimeout(() => btn.textContent = 'Copy', 1600); };
     const fallback = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected'); };
     try { navigator.clipboard.writeText(txt).then(() => done('Copied'), fallback); } catch (e) { fallback(); }
+  }));
+})();
+</script>
+
+<script>
+/* ---------- contact layer behind the page ---------- */
+(() => {
+  const page = document.getElementById('page'), rev = document.getElementById('reveal');
+  const inner = rev.querySelector('.contact .grid');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function fit(){
+    const h = rev.offsetHeight;
+    const ok = h < innerHeight * 0.92;           // only layer it if it fits on screen
+    rev.classList.toggle('fixed', ok);
+    page.style.marginBottom = ok ? h + 'px' : '0px';
+    onScroll();
+  }
+  function onScroll(){
+    if (reduce || !rev.classList.contains('fixed')) { inner.style.transform = ''; inner.style.opacity = ''; return; }
+    const left = document.documentElement.scrollHeight - innerHeight - scrollY;   // px until fully uncovered
+    const p = Math.max(0, Math.min(1, 1 - left / rev.offsetHeight));
+    inner.style.transform = `translateY(${(1 - p) * 60}px)`;
+    inner.style.opacity = (0.35 + p * 0.65).toFixed(3);
+  }
+  addEventListener('resize', fit); addEventListener('scroll', onScroll, {passive:true});
+  addEventListener('load', fit); document.fonts && document.fonts.ready.then(fit); fit();
+  // links to #contact scroll to the very end so the layer is fully uncovered
+  document.querySelectorAll('a[href="#contact"]').forEach(a => a.addEventListener('click', e => {
+    if (!rev.classList.contains('fixed')) return;
+    e.preventDefault(); scrollTo({top: document.documentElement.scrollHeight, behavior: reduce ? 'auto' : 'smooth'});
   }));
 })();
 </script>
