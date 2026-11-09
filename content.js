@@ -33,7 +33,7 @@ window.SITE = {
 
   // Put a photo file (e.g. photo.jpg) in the repo and write its name here.
   // Leave "" to show the KS monogram instead.
-  photo: "",
+  photo: "photo.jpg",
 
   // Upload your CV as a PDF (e.g. Karthick_Srinivasan_CV.pdf) and write its name here.
   // A "Download CV" button appears. Leave "" to hide the button.
