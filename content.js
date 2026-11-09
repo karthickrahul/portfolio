@@ -11,20 +11,17 @@
 
 window.SITE = {
   // ---------------- FONT SIZES ----------------
-  // 1 = normal size.  0.8 = 20% smaller.  1.2 = 20% bigger.
+  // 1 = normal size.  0.9 = 10% smaller.  1.1 = 10% bigger.
   fontSizes: {
-    "headline":       0.8,   // "INDUSTRIAL ENGINEER FOR mechanical design" at the top
-    "bigword":        0.8,   // giant grey "ENGINEER" behind the animation
-    "section-titles": 0.8,   // "ABOUT ME", "CAREER ROUTE", "FEATURED PROJECTS"...
-    "card-titles":    0.8,   // titles inside cards (projects, jobs, skills, contact box)
-    "numbers":        0.8,   // "2yrs  20%  1live" under the hero
-    "marquee":        0.8,   // scrolling strip of tools
-    "giant-words":    0.35,      // your name in huge letters at the bottom
-    "contact-word":   0.35,   // big "CONTACT" word above the red box
-    "text":           0.8    // all normal paragraph text
+    "headline":       1,   // your name at the top
+    "section-titles": 1,   // "Experience", "Projects", "Skills"...
+    "card-titles":    1,   // titles of jobs, projects, skill groups
+    "numbers":        1,   // "2 yrs  20%  1 live" under the intro
+    "text":           1    // all normal paragraph text
   },
 
   name: "Karthickk Rahul Srinivasan",
+  title: "Industrial Engineer · Quality & Process",   // line under your name
   firstName: "Karthick",
   initials: "KS",
   location: "Ostrava, Czech Republic",
@@ -38,10 +35,13 @@ window.SITE = {
   // Leave "" to show the KS monogram instead.
   photo: "",
 
+  // Upload your CV as a PDF (e.g. Karthick_Srinivasan_CV.pdf) and write its name here.
+  // A "Download CV" button appears. Leave "" to hide the button.
+  cvFile: "",
+
   hero: {
-    bigWord: "ENGINEER",                 // giant grey word behind the animation
-    headline: "Industrial engineer for", // first part of the headline
-    // These rotate in red. The animation behind shows an impeller, a control chart, a gear.
+    headline: "Focused on",              // text before the rotating red words
+    // These rotate in red, in sync with the drawing (impeller, control chart, gear).
     rotatingWords: ["mechanical design", "quality & SPC", "lean production"],
     intro: "M.Sc. Industrial Engineering student at **VŠB – Technical University of Ostrava**. Mechanical engineer with two years in **quality and production** on a pump manufacturing floor, now building data tools for manufacturing.",
     stats: [
@@ -67,7 +67,8 @@ window.SITE = {
   // The scrolling strip of tools
   marquee: ["SPC", "Cp / Cpk", "FMEA", "DMAIC", "Gage R&R", "GD&T", "Python", "Power BI", "Fusion 360", "CATIA V5", "Line balancing", "OpenCV"],
 
-  // Career route, oldest first. The last one is highlighted.
+  // Experience & education, oldest first (the site shows newest first).
+  // A line with when: "Now" is hidden from the list.
   career: [
     { when: "2020 – 2024",         title: "B.E. Mechanical",       org: "KPR College of Engineering & Technology", text: "SAE India electric four-wheeler design competition: CAD/CAM for vehicle subsystems." },
     { when: "Jul 2022 – Jun 2023", title: "R&D Intern",            org: "Kone Elevators, Chennai",                 text: "Safety door prototype development." },
