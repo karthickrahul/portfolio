@@ -19,6 +19,7 @@ Common edits:
 | Add a job / step | Copy one line inside `career` and edit it (oldest first) |
 | Change the red rotating words | Edit `rotatingWords` |
 | Hide "Open to internships" | Change `status` (e.g. `"Open to work"`) |
+| Make text smaller/bigger | Change the numbers under `fontSizes` at the top (0.8 = 20% smaller) |
 | Show my phone | Fill in `phone: "+420 ..."` |
 
 **Mistake?** If the page goes blank after an edit, a quote or comma is missing.
