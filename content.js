@@ -19,7 +19,7 @@ window.SITE = {
     "card-titles":    0.8,   // titles inside cards (projects, jobs, skills, contact box)
     "numbers":        0.8,   // "2yrs  20%  1live" under the hero
     "marquee":        0.8,   // scrolling strip of tools
-    "giant-words":    0.8,   // huge "CONTACT" and your name at the bottom
+    "giant-words":    0.6,   // huge "CONTACT" and your name at the bottom
     "text":           0.8    // all normal paragraph text
   },
 
