@@ -150,6 +150,12 @@ section.block.alt{background:var(--sheet)}
 /* PROJECTS */
 .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .proj{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:26px;display:flex;flex-direction:column;gap:12px;min-width:0;transition:border-color .2s,box-shadow .2s,transform .2s}
+.proj{position:relative}
+.proj h3 a{color:inherit;text-decoration:none}
+.proj h3 a::after{content:'';position:absolute;inset:0;border-radius:10px;z-index:1}
+.proj h3 a:hover,.proj h3 a:focus-visible{color:var(--signal)}
+.proj.linked{cursor:pointer}
+.links{position:relative;z-index:2}
 .proj:hover{border-color:#c4c9ce;box-shadow:0 14px 34px -24px rgba(28,36,48,.5);transform:translateY(-2px)}
 .proj .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .proj h3{font-size:calc(22px * var(--sz-card));font-weight:650;line-height:1.2}
@@ -382,15 +388,17 @@ body{background:var(--ink)}
     : s === 'progress' ? '<span class="pill wip">In progress</span>'
     : s ? `<span class="pill">${esc(s)}</span>` : '';
   const link = l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`;
+  // project name links to p.url (live site), else the first listed link; no URL -> plain text
+  const titleHtml = p => { const u = p.url || p.links?.[0]?.url; return u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title); };
   $('#project-grid').innerHTML = D.projects.map(p => {
     const tags = p.tags?.length ? `<div class="tags">${p.tags.map(t => `<span>${esc(t)}</span>`).join('')}</div>` : '';
     const links = p.links?.length ? `<div class="links">${p.links.map(link).join('')}</div>` : '';
-    const head = `<div class="top"><span class="mono">${esc(p.kind)}</span>${pill(p.status)}</div><h3>${esc(p.title)}</h3><p>${rich(p.text)}</p>`;
+    const head = `<div class="top"><span class="mono">${esc(p.kind)}</span>${pill(p.status)}</div><h3>${titleHtml(p)}</h3><p>${rich(p.text)}</p>`;
     if (p.featured) {
       const mods = (p.modules || []).map((m, i) => `<div><b>M${i + 1}</b><span>${esc(m.name)}<small>${esc(m.detail)}</small></span></div>`).join('');
-      return `<article class="proj feature"><div class="main">${head}${tags}${links}</div>${mods ? `<div class="modules">${mods}</div>` : ''}</article>`;
+      return `<article class="proj feature${(p.url||p.links?.length)?' linked':''}"><div class="main">${head}${tags}${links}</div>${mods ? `<div class="modules">${mods}</div>` : ''}</article>`;
     }
-    return `<article class="proj">${head}${tags}${links}</article>`;
+    return `<article class="proj${(p.url||p.links?.length)?' linked':''}">${head}${tags}${links}</article>`;
   }).join('');
 
   $('#skill-grid').innerHTML = D.skills.map(s =>
