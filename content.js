@@ -85,6 +85,7 @@ window.SITE = {
       title: "Factory Optimization Suite",
       kind: "Web app · Python + JS",
       status: "live",
+      url: "https://karthickrahul.github.io/factory-optimization-suite/",   // clicking the project name opens this
       text: "A browser app recruiters and engineers can actually use. Paste your own process data and get control charts and capability indices, a balanced assembly line, or a simulated factory flow.",
       links: [
         { label: "Open live app", url: "https://karthickrahul.github.io/factory-optimization-suite/" },
@@ -100,10 +101,11 @@ window.SITE = {
     {
       title: "Defect inspection with YOLO",
       kind: "Computer vision",
-      status: "progress",
-      text: "Surface defect detection with YOLO and OpenCV, feeding an SPC dashboard and a model of the effect on scrap and inspection time. Built first on clearly labelled synthetic data; a rerun on the NEU steel defect dataset is next.",
+      status: "live",
+      url: "https://github.com/karthickrahul/-Manufacturing-dashboard/tree/main/cv-inspection",   // swap for the Netlify dashboard URL once deployed
+      text: "YOLO11n steel-surface defect detector trained on the NEU-DET dataset: **98%** of defective parts flagged on 270 held-out images (mAP50 0.74), benchmarked against an SVM baseline. Feeds an SPC dashboard and a Monte Carlo inspection model; the EUR figures are simulated assumptions, not plant results.",
       tags: ["YOLO", "OpenCV", "SPC", "Python"],
-      links: [{ label: "GitHub", url: "https://github.com/karthickrahul/-Manufacturing-dashboard" }]
+      links: [{ label: "GitHub", url: "https://github.com/karthickrahul/-Manufacturing-dashboard/tree/main/cv-inspection" }]
     },
     {
       title: "Final-inspection rejection rate",
